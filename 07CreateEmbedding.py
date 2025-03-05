@@ -31,9 +31,8 @@ def update_embeddings():
 
     for chunk_id, chunk_text in rows:
         embedding = get_embedding2(chunk_text)
-        embedding_str = np.array(embedding).tolist()  # Konvertovat na JSON-like pole
+        embedding_str = np.array(embedding).tolist()  
         print(f"{chunk_id}")
-        # Uložení do PostgreSQL
         cur.execute("""
             UPDATE chunks SET embedding = %s WHERE id = %s;
         """, (embedding_str, chunk_id))

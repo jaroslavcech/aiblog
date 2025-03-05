@@ -6,7 +6,7 @@ import re
 DB_PARAMS = {
     "dbname": "rheldoc",
     "user": "postgres",
-    "password": "prdel",
+    "password": "xxx",
     "host": "localhost",
     "port": "5432"
 }
